@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 14px;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.form {
+	max-width: 500px;
+	margin: 0 auto;
+	color: #fff;
+	padding: 30px 0;
+}
+
+.form__body {
+	position: relative;
+}
+
+.form__body::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 51, 51, 0.5)  url("../img/log.gif") center / 70px no-repeat;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.form__body._selding::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form__tilte {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	margin: 0px 0px 20px 0px;
+}
+
+.form__item {
+	margin: 0px 0px 25px 0px;
+}
+.form__ladel {
+	font-size: 16px;
+	display: block;
+	margin: 0px 0px 15px 0px;	
+}
+
+.form__input {
+	height: 30px;
+	padding: 0px 15px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 14px;
+}
+
+ .form__input._error {
+ 	box-shadow: 0 0 20px red;
+ }
+
+textarea.form__input {
+	min-height: 100px;
+	resize: vertical;
+	padding: 15px;
+}
+
+.select {
+	height: 30px;
+	width: 100%;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 0px 15px;
+}
+
+select.select {
+	margin: 0px 0px 15px 0px;
+}
+
+
+.form__item {}
+
+.checkbox {}
+
+.checkbox._error .checkbox__label::before {
+	box-shadow: 0 0 20px red;	
+}
+
+.checkbox__input {
+
+	display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+	transform: scale(1);
+}
+
+.checkbox__label {
+
+	font-size: 16px;
+	line-height: 20px;
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox__label::before {
+	content: "";
+	align-self: flex-start;
+	flex: 0 0 16px;
+	height: 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	margin: 0px 10px 0px 0px;
+}
+
+.checkbox__label::after {
+	transition: transform 0.4s ease 0s;
+	content: "";
+	top: 2px;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	background-color: #7a956b;
+	border-radius: 4px;	
+	transform: scale(0);
+}
+
+.checkbox__label a {
+	color: #609070;
+}
+
+.form__button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 35px;
+	background-color: #696969;;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 25px;
+	box-shadow: 0 5px 0 #fff;
+	transition: background-color 0.5s ease 0s;
+	position: relative;
+	top: 0;
+}
+
+.form__button:hover {
+	background-color: #4151;
+}
+
+.form__button:active {
+	top: 2px;
+}
